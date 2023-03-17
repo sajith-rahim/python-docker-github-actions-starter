@@ -3,11 +3,13 @@ on: workflow_dispatch
 jobs:
   workflow_uno_job_uno:
     runs-on: ubuntu-latest
+    env:
+      JSON: ${{ toJSON(github) }}
     steps:
       - name: echo Hey
         run: echo "Hey there"
       - name: echo github var
-        run: echo ${{ toJSON(github) }}
+        run: echo $JSON
     
   workflow_uno_job_dos:
     needs: workflow_uno_job_uno
