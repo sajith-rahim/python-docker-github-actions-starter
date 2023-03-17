@@ -7,7 +7,7 @@ jobs:
       - name: echo Hey
         run: echo "Hey there"
       - name: echo github var
-        run: echo ${{ github }}
+        run: echo ${{ toJSON(github) }}
     
   workflow_uno_job_dos:
     needs: workflow_uno_job_uno
