@@ -2,7 +2,7 @@ name: Workflow 1
 on: workflow_dispatch
 jobs:
   workflow_uno_job_uno:
-    runs-on: ububtu@latest
+    runs-on: ubuntu-latest
     steps:
       - name: echo Hey
         run: echo "Hey there"
@@ -11,7 +11,7 @@ jobs:
     
   workflow_uno_job_dos:
     needs: workflow_uno_job_uno
-    runs-on: ubuntu@latest
+    runs-on: ubuntu-latest
     steps:
       - name: echo Bye
         run: echo "Bye!"
