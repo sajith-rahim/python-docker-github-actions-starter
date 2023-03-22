@@ -6,8 +6,11 @@ branding:
   color: 'blue' # color in lowercase.
 inputs:
   fname:
-    description: "file name"
+    description: "input to docker action : file name"
     required: true
+outputs:
+  response-text:
+    description: "output text from docker action"
 runs:
   using: "docker"
   image: "Dockerfile"
