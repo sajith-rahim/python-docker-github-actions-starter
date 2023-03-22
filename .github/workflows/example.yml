@@ -14,7 +14,7 @@ jobs:
       id: run-docker-action
       uses: ./
       with:
-        fname: 'user'
+        fname: 'data'
 
     - name: show-output
       run: |
