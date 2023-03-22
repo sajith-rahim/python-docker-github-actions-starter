@@ -6,7 +6,6 @@ import os
 import sys
 
 
-
 def process(fname):
     with open(f'{fname}.json') as _file:
         data = json.load(_file)
@@ -28,4 +27,7 @@ if __name__ == "__main__":
     print(f"Argument `fname` received is ${fname}")
     user = process(fname)
     response = f"User {user.get('name')} is available at {user.get('website')}"
-    print(f"::set-output name=response-text::{response}")
+
+    # print(f"::set-output name=response-text::{response}") # ::set-output is soon to be deprecated
+    with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+        print(f'response-text={response}', file=fh)
