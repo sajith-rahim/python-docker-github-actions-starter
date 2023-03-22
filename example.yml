@@ -1,0 +1,15 @@
+name: Sample py-docker gh-action
+
+on:
+  workflow_dispatch
+jobs:
+  run-action:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: run-docker
+      uses: ./
+      with:
+        url: 'user'
