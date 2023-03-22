@@ -1,11 +1,11 @@
-name: "run-main"
-description: ""
+name: "py-docker-starter"
+description: "Boilerplate for GH-Action with Python in docker."
 author: 'sajith-rahim'
 branding:
-  icon: 'scissors' # Name of an Octicon https://primer.style/octicons/
-  color: 'blue' # A color in lowercase, e.g., blue, green, red, etc.
+  icon: 'command-palette' # Reference https://primer.style/octicons/
+  color: 'blue' # color in lowercase.
 inputs:
-  url:
+  fname:
     description: "file name"
     required: true
 runs:
