@@ -1,4 +1,4 @@
-#!/usr/bin/env -S docker build . --tag=py-gh-action
+
 
 FROM python:3.11.2-slim-bullseye
 
