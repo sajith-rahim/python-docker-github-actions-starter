@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import pandas as pd
 import numpy as np
 
@@ -21,4 +23,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     fname = sys.argv[1]
+    print(f"fname is ${fname}")
     example(fname)
