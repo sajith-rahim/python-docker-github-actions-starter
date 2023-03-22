@@ -1,7 +1,5 @@
 FROM python:3.11.2-slim-bullseye
 
-ENV env_workspace_directory= '/app'
-
 RUN ls -al
 
 # Set the work directory
@@ -13,8 +11,8 @@ RUN ls -al
 #COPY entrypoint.py /app
 
 RUN echo "Copy the GitHub repo to the Docker container"
-RUN echo "COPY . ${env_workspace_directory}"
-COPY . ${env_workspace_directory}
+RUN echo "COPY . /app"
+COPY . /app
 
 RUN ls -al
 
