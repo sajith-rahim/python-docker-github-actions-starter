@@ -18,7 +18,7 @@ jobs:
       uses: shrink/actions-docker-extract@v2
       id: extract
       with:
-        image: my-example-image
+        image: ubuntu-latest
         path: /app/.
         
     - name: Upload
