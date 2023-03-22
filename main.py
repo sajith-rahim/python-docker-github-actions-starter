@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 
-import pandas as pd
-import numpy as np
-
+import json
+import numpy
+import os
 import sys
 
 
-def example(fname):
 
-    users = {'Name': ['Person1', 'Person2', 'Person3'],
-        'Age': [20,21,25]}
-    
-    df = pd.DataFrame(users, columns=['Name','Age'])
-    
-    df.to_csv(f'${fname}.csv', sep='\t', index=False,header=True)
+def process(fname):
+    with open(f'{fname}.json') as _file:
+        data = json.load(_file)
+        print(data)
+
+        return data
 
 
 if __name__ == "__main__":
@@ -23,5 +22,10 @@ if __name__ == "__main__":
         sys.exit(1)
 
     fname = sys.argv[1]
-    print(f"fname is ${fname}")
-    example(fname)
+
+    print(f"Input: {sys.argv[1]} = {os.environ['INPUT_FNAME']}")
+
+    print(f"Argument `fname` received is ${fname}")
+    user = process(fname)
+    response = f"User {user.get('name')} is available at {user.get('website')}"
+    print(f"::set-output name=response-text::{response}")
