@@ -14,15 +14,8 @@ jobs:
       with:
         fname: 'user'
     
-    - name: run-extract
-      uses: shrink/actions-docker-extract@v2
-      id: extract
-      with:
-        image: ubuntu-latest
-        path: /app/.
-        
-    - name: Upload
-      uses: actions/upload-artifact@v2
-      with:
-        path: ${{ steps.extract.outputs.destination }}
-        name: dist
+    - name: copy-to-host
+      run: docker cp py-gh-action:/app .
+      
+    - name: dev-list-files
+      run: ls -al
