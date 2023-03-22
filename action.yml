@@ -1,0 +1,15 @@
+name: "run-main"
+description: ""
+author: 'sajith-rahim'
+branding:
+  icon: 'scissors' # Name of an Octicon https://primer.style/octicons/
+  color: 'blue' # A color in lowercase, e.g., blue, green, red, etc.
+inputs:
+  url:
+    description: "file name"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - '${{ inputs.fname }}'
