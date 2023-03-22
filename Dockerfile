@@ -7,7 +7,6 @@ RUN ls -al
 # Set the work directory
 WORKDIR /app
 
-RUN ls -al
 
 # Copy the GitHub Action script
 #COPY entrypoint.py /app
