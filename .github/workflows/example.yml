@@ -14,9 +14,9 @@ jobs:
       id: run-docker-action
       uses: ./
       with:
-        fname: 'user'
+        fname: 'data'
 
     - name: show-output
       run: |
-        echo "Response Text: ${steps.run-docker-action.outputs.response-text}"
+        echo "Response Text: ${{ steps.run-docker-action.outputs.response-text }}"
     
