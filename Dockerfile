@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY . /app
 
-# Or Copy the action script (and other required files)
+# -- Or Copy the action script (and other required files)
 
 # COPY entrypoint.py /app
 
@@ -16,6 +16,8 @@ COPY . /app
 # Install requirements
 
 RUN pip install -r requirements.txt
+
+# RUN apt-get -y update && apt-get install -y wget git
 
 # Set execute permissions for the entrypoint script
 
