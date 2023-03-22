@@ -1,4 +1,4 @@
-name: Sample py-docker gh-action
+name: Run py-docker gh-action
 
 on:
   workflow_dispatch
