@@ -2,6 +2,7 @@ name: Sample py-docker gh-action
 
 on:
   workflow_dispatch
+
 jobs:
   run-action:
     runs-on: ubuntu-latest
@@ -9,8 +10,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: run-docker
+    - name: run-docker-action
+      id: run-docker-action
       uses: ./
       with:
         fname: 'user'
+
+    - name: show-output
+      run: |
+        echo "Response Text: ${steps.run-docker-action.outputs.response-text}"
     
