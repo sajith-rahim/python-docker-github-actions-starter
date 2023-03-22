@@ -15,7 +15,7 @@ COPY . ${env_workspace_directory}
 
 
 # Install snapsht and run setup
-RUN pip install requirements.txt
+RUN pip install -r requirements.txt
 
 # Set execute permissions for the entrypoint script
 RUN chmod +x /app/main.py
