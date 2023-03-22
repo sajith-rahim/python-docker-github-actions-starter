@@ -16,6 +16,7 @@ RUN echo "Copy the GitHub repo to the Docker container"
 RUN echo "COPY . /app"
 COPY . /app
 
+RUN pwd
 RUN ls -al
 
 # Install snapsht and run setup
