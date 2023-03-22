@@ -14,8 +14,3 @@ jobs:
       with:
         fname: 'user'
     
-    - name: copy-to-host
-      run: docker cp py-gh-action:/app .
-      
-    - name: dev-list-files
-      run: ls -al
