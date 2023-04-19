@@ -70,12 +70,7 @@ jobs:
 |           example.yml
 
 ```
-    
-## Contributing
 
-Feel free to fork.
-
-Do ⭐ if you found this useful. 😊 
 
 ## License
 
